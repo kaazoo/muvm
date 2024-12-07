@@ -1,0 +1,31 @@
+#!/usr/bin/make -f
+# debian/rules for the Debian libkrunfw package
+# Copyright © 2024 Andreas Schröder <andreas@kernelpanik.net>
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+# for some reason MAKEFLAGS was set to "w" in sub make execution
+MAKEFLAGS += --no-print-directory
+
+# use specific rustc path
+export RUSTC:=/usr/bin/rustc-1.80
+
+# build in offline mode
+override_dh_auto_build:
+	cargo-1.80 build --release --offline
+
+# copy binaries from release target to expected place
+override_dh_install:
+	mkdir -p debian/muvm/usr/bin
+	cp target/release/muvm debian/muvm/usr/bin/
+	cp target/release/muvm-guest debian/muvm/usr/bin/
+	cp target/release/muvm-server debian/muvm/usr/bin/
+	cp target/release/muvm-x11bridge debian/muvm/usr/bin/
+	dh_install -a
+
+override_dh_auto_clean:
+	cargo-1.80 clean
+
+%:
+	dh $@

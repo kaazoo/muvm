@@ -1,0 +1,50 @@
+Source: muvm
+Section: misc
+Priority: optional
+Maintainer: Andreas Schröder <andreas@kernelpanik.net>
+Build-Depends:
+ debhelper-compat (= 13),
+ python3-pyelftools,
+ build-essential,
+ gawk,
+ flex,
+ bison,
+ openssl,
+ libssl-dev,
+ libelf-dev,
+ libudev-dev,
+ autoconf,
+ bc,
+ cpio,
+ xz-utils,
+ fakeroot,
+ libkrun-dev,
+ rust-1.80-all,
+ pkg-config,
+ libpipewire-0.3-dev,
+ clang,
+ llvm-18-dev,
+ libclang-18-dev,
+ libclang-cpp18-dev,
+ libepoxy-dev,
+ libdrm-dev,
+ libvirglrenderer-dev,
+ patchelf
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/AsahiLinux/muvm.git
+Vcs-Browser: https://github.com/AsahiLinux/muvm
+Homepage: https://github.com/AsahiLinux/muvm
+
+Package: muvm
+Section: misc
+Architecture: arm64
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
+Description: muvm
+ muvm allows you to run arbitrary programs from your system in a microVM. It's comprised of three small programs:
+ muvm: links against libkrun to create the microVM.
+ muvm-guest: acts as an entrypoint inside the microVM to set up the environment for running your program.
+ muvm-server: a server listening for requests to run additional programs. This allows you to run multiple graphical applications inside the same microVM.

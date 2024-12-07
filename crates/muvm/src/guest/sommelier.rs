@@ -27,6 +27,7 @@ where
         "--direct-scale",
         "--log-level=3",
         "--glamor",
+        "--xwayland-path=/usr/bin/Xwayland"
     ]);
 
     if let Some(gl_env) = gl_env {
