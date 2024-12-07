@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: muvm
+Source: https://github.com/AsahiLinux/muvm
+
+Files: *
+Copyright: Sergio López, Teoh Han Hui, Asahi Lina, Alyssa Rosenzweig
+License: MIT
+

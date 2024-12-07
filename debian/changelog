@@ -1,0 +1,13 @@
+muvm (0.1.3-1asahi3.24.10) oracular; urgency=medium
+
+  * Build for oracular
+  * Based on tag muvm-0.1.3
+
+ -- Andreas Schröder <andreas@kernelpanik.net>  Wed, 4 Dec 2024 07:43:00 +0100
+
+muvm (0.1.3-1asahi1.24.04) noble; urgency=medium
+
+  * Build for noble
+  * Based on tag muvm-0.1.3
+
+ -- Andreas Schröder <andreas@kernelpanik.net>  Sun, 1 Dec 2024 22:12:00 +0100
