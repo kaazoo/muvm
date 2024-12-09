@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-# debian/rules for the Debian libkrunfw package
+# debian/rules for the Debian muvm package
 # Copyright © 2024 Andreas Schröder <andreas@kernelpanik.net>
 
 # Uncomment this to turn on verbose mode.
@@ -11,8 +11,11 @@ MAKEFLAGS += --no-print-directory
 # use specific rustc path
 export RUSTC:=/usr/bin/rustc-1.80
 
-# build in offline mode
+# patch rustc command in libudev-sys (see https://github.com/dcuddeback/libudev-sys/issues/18)
+# and build in offline mode
 override_dh_auto_build:
+	sed -i 's/"rustc"/"rustc-1.80"/' vendor/libudev-sys/build.rs
+	sed -i 's/b801576b83a52794c739b5af6cbb7231e8fe1d35949d59ecdd47498d0f58d1c0/5ee47a05c33b6bf6dbe369f0635b41a668ceb774b3c3e0bb56035534daaf51fe/' vendor/libudev-sys/.cargo-checksum.json
 	cargo-1.80 build --release --offline
 
 # copy binaries from release target to expected place
@@ -20,6 +23,7 @@ override_dh_install:
 	mkdir -p debian/muvm/usr/bin
 	cp target/release/muvm debian/muvm/usr/bin/
 	cp target/release/muvm-guest debian/muvm/usr/bin/
+	cp target/release/muvm-hidpipe debian/muvm/usr/bin/
 	cp target/release/muvm-server debian/muvm/usr/bin/
 	cp target/release/muvm-x11bridge debian/muvm/usr/bin/
 	dh_install -a
