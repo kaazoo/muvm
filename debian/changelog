@@ -1,3 +1,31 @@
+muvm (0.2.0-1asahi2.24.10) oracular; urgency=medium
+
+  * Build for oracular
+  * Include https://github.com/AsahiLinux/muvm/pull/129
+
+ -- Andreas Schröder <andreas@kernelpanik.net>  Sun, 15 Dec 2024 17:23:00 +0100
+
+muvm (0.2.0-1asahi2.24.04) noble; urgency=medium
+
+  * Build for noble
+  * Include https://github.com/AsahiLinux/muvm/pull/129
+
+ -- Andreas Schröder <andreas@kernelpanik.net>  Sun, 15 Dec 2024 16:21:00 +0100
+
+muvm (0.2.0-1asahi1.24.10) oracular; urgency=medium
+
+  * Build for oracular
+  * Based on tag muvm-0.2.0
+
+ -- Andreas Schröder <andreas@kernelpanik.net>  Fri, 13 Dec 2024 07:01:00 +0100
+
+muvm (0.2.0-1asahi1.24.04) noble; urgency=medium
+
+  * Build for noble
+  * Based on tag muvm-0.2.0
+
+ -- Andreas Schröder <andreas@kernelpanik.net>  Mon, 9 Dec 2024 23:53:00 +0100
+
 muvm (0.1.4-1asahi2.24.10) oracular; urgency=medium
 
   * Build for oracular
