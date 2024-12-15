@@ -41,6 +41,7 @@ Architecture: arm64
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
+ passt
 Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: muvm
