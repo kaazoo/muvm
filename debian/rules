@@ -23,9 +23,6 @@ override_dh_install:
 	mkdir -p debian/muvm/usr/bin
 	cp target/release/muvm debian/muvm/usr/bin/
 	cp target/release/muvm-guest debian/muvm/usr/bin/
-	cp target/release/muvm-hidpipe debian/muvm/usr/bin/
-	cp target/release/muvm-server debian/muvm/usr/bin/
-	cp target/release/muvm-x11bridge debian/muvm/usr/bin/
 	dh_install -a
 
 override_dh_auto_clean:
