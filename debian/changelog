@@ -1,3 +1,17 @@
+muvm (0.4.1-1asahi1.25.04) plucky; urgency=medium
+
+  * Build for plucky
+  * Based on tag muvm-0.4.1
+
+ -- Andreas Schröder <andreas@kernelpanik.net>  Sun, 4 May 2025 21:26:00 +0200
+
+muvm (0.4.1-1asahi4.24.04) noble; urgency=medium
+
+  * Build for noble
+  * Based on tag muvm-0.4.1
+
+ -- Andreas Schröder <andreas@kernelpanik.net>  Sun, 4 May 2025 00:32:00 +0200
+
 muvm (0.3.1-1asahi2.24.04) noble; urgency=medium
 
   * Build for noble
