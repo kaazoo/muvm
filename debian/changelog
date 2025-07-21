@@ -1,3 +1,17 @@
+muvm (0.4.1-1asahi4.25.04) plucky; urgency=medium
+
+  * Build for plucky
+  * Build against newer libkrun
+
+ -- Andreas Schröder <andreas@kernelpanik.net>  Sat, 19 Jul 2025 23:26:00 +0200
+
+muvm (0.4.1-1asahi7.24.04) noble; urgency=medium
+
+  * Build for noble
+  * Build against newer libkrun
+
+ -- Andreas Schröder <andreas@kernelpanik.net>  Sat, 19 Jul 2025 23:13:00 +0200
+
 muvm (0.4.1-1asahi3.25.04) plucky; urgency=medium
 
   * Build for plucky
