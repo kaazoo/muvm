@@ -1,8 +1,8 @@
 [package]
 name = "krun-sys"
-version = "1.14.0"
+version = "1.17.2"
 edition = "2021"
-rust-version = "1.77.0"
+rust-version = "1.89.0"
 description = "Rust bindings for libkrun"
 repository = "https://github.com/containers/libkrun"
 license = "Apache-2.0"
