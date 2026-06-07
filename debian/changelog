@@ -1,3 +1,27 @@
+muvm (0.5.1-1asahi1.26.04) resolute; urgency=medium
+
+  * Build for resolute
+  * Build against newer libkrun
+  * Based on tag muvm-0.5.1
+
+ -- Andreas Schröder <andreas@kernelpanik.net>  Fri, 3 Apr 2026 23:35:00 +0200
+
+muvm (0.5.1-1asahi1.25.10) questing; urgency=medium
+
+  * Build for questing
+  * Build against newer libkrun
+  * Based on tag muvm-0.5.1
+
+ -- Andreas Schröder <andreas@kernelpanik.net>  Fri, 3 Apr 2026 23:23:00 +0200
+
+muvm (0.5.1-1asahi1.24.04) noble; urgency=medium
+
+  * Build for noble
+  * Build against newer libkrun
+  * Based on tag muvm-0.5.1
+
+ -- Andreas Schröder <andreas@kernelpanik.net>  Fri, 3 Apr 2026 22:53:00 +0200
+
 muvm (0.5.0-1asahi1.25.10) questing; urgency=medium
 
   * Build for questing
