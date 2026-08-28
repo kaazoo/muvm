@@ -1,3 +1,11 @@
+muvm (0.6.0-1asahi1.26.04) resolute; urgency=medium
+
+  * Build for resolute
+  * Build against newer libkrun
+  * Based on tag muvm-0.6.0
+
+ -- Andreas Schröder <andreas@kernelpanik.net>  Mon, 8 Jun 2026 01:13:00 +0200
+
 muvm (0.5.1-1asahi1.26.04) resolute; urgency=medium
 
   * Build for resolute

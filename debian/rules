@@ -9,14 +9,14 @@ export DH_VERBOSE=1
 MAKEFLAGS += --no-print-directory
 
 # use specific rustc path
-export RUSTC:=/usr/bin/rustc-1.89
+export RUSTC:=/usr/bin/rustc-1.91
 
 # patch rustc command in libudev-sys (see https://github.com/dcuddeback/libudev-sys/issues/18)
 # and build in offline mode
 override_dh_auto_build:
-	sed -i 's/"rustc"/"rustc-1.89"/' vendor/libudev-sys/build.rs
-	sed -i 's/b801576b83a52794c739b5af6cbb7231e8fe1d35949d59ecdd47498d0f58d1c0/0554c3297e679d735744010c69d4a4636eb26a83ab2e243e0f3bd29c0a908013/' vendor/libudev-sys/.cargo-checksum.json
-	cargo-1.89 build --release --offline
+	sed -i 's/"rustc"/"rustc-1.91"/' vendor/libudev-sys/build.rs
+	sed -i 's/0554c3297e679d735744010c69d4a4636eb26a83ab2e243e0f3bd29c0a908013/da1633d62c088ebcbe8f9389d9bb313d938488605049a443a29357188156cc19/' vendor/libudev-sys/.cargo-checksum.json
+	cargo-1.91 build --release --offline
 
 # copy binaries from release target to expected place
 override_dh_install:
@@ -26,7 +26,7 @@ override_dh_install:
 	dh_install -a
 
 override_dh_auto_clean:
-	cargo-1.89 clean
+	cargo-1.91 clean
 
 override_dh_clean:
 	dh_clean -XCargo.toml.orig
