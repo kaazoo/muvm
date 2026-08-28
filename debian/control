@@ -20,7 +20,7 @@ Build-Depends:
  fakeroot,
  libkrun-dev,
  libkrunfw-dev,
- rust-1.89-all,
+ rust-1.91-all,
  pkg-config,
  libpipewire-0.3-dev,
  clang,
